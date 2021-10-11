@@ -18,7 +18,7 @@ function Editor({ activePlan }) {
                 <label htmlFor="tagsInput" className="form-label">Tags</label>
                 <input type="text" id="tagsInput" className="form-control" />
             </div>
-            <FeatureBlock activePlan={activePlan} planName="Pro">
+            <FeatureBlock activePlan={activePlan} planNames={["Ultimate"]}>
                 <div className="mb-3">
                     Publishers
                     <div className="form-check">
@@ -35,7 +35,7 @@ function Editor({ activePlan }) {
                     </div>
                 </div>
             </FeatureBlock>
-            <FeatureBlock activePlan={activePlan} planName="Ultimate">
+            <FeatureBlock activePlan={activePlan} planNames={["Pro", "Ultimate"]}>
                 <div className="mb-3">
                     <label htmlFor="scheduleInput" className="form-label">Schedule</label>
                     <input type="datetime-local" id="scheduleInput" className="form-control" />
