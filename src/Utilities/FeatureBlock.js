@@ -4,8 +4,6 @@ function FeatureBlock(props) {
     const isFeatureVisible = props.activePlan.features
         .find(feature => feature === props.featureName);
 
-    console.log(props.activePlan);
-
     if (isFeatureVisible) {
         return (
                 <>
@@ -13,11 +11,12 @@ function FeatureBlock(props) {
                 </>
             );
     } else {
-        return (<></>);
+        return null;
     }
 };
 
 FeatureBlock.propTypes = {
+    activePlan: PropTypes.object.isRequired,
     featureName: PropTypes.string.isRequired
 };
 
