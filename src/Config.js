@@ -7,13 +7,11 @@ const Config = {
         },
         {
             id: 1,
-            name: 'Pro',
-            features: ['scheduledPost']
+            name: 'Pro'
         },
         {
             id: 2,
-            name: 'Ultimate',
-            features: ['scheduledPost', 'multiplePublishers']
+            name: 'Ultimate'
         }
     ]
 };

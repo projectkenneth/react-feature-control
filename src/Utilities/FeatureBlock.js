@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 
 function FeatureBlock(props) {
-    const isFeatureVisible = props.activePlan.features
-        .find(feature => feature === props.featureName);
+    const isFeatureVisible = props.activePlan.name === props.planName;
 
     if (isFeatureVisible) {
         return (
@@ -17,7 +16,7 @@ function FeatureBlock(props) {
 
 FeatureBlock.propTypes = {
     activePlan: PropTypes.object.isRequired,
-    featureName: PropTypes.string.isRequired
+    planName: PropTypes.string.isRequired
 };
 
 export default FeatureBlock;
