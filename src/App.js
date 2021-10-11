@@ -8,7 +8,7 @@ import Editor from "./Editor/Editor";
 function App() {
   const availablePlans = Config.availablePlans;
 
-  const [activePlan, setActivePlan] = useState(0);
+  const [activePlan, setActivePlan] = useState(availablePlans[0]);
 
   return (
     <div className="container">
@@ -21,7 +21,7 @@ function App() {
       </div>
       <div className="row">
         <div className="col p-3">
-          <Editor />
+          <Editor activePlan={activePlan} />
         </div>
       </div>
     </div>

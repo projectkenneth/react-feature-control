@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 
 function RoleSwitcher({ plans, activePlan, setActivePlan }) {
     const navItemTags = () =>
-        plans.map((label, index) =>
-            <li className="nav-item" key={index}>
-                <button className={"nav-link" + (activePlan === index ? " active" : "")} onClick={e => setActivePlan(index)}>{label}</button>
+        plans.map((plan) =>
+            <li className="nav-item" key={plan.id}>
+                <button className={"nav-link" + (activePlan.id === plan.id ? " active" : "")} onClick={e => setActivePlan(plan)}>{plan.name}</button>
             </li>
         );
 
@@ -16,7 +16,7 @@ function RoleSwitcher({ plans, activePlan, setActivePlan }) {
 };
 
 RoleSwitcher.propTypes = {
-    activePlan: PropTypes.number.isRequired,
+    activePlan: PropTypes.object.isRequired,
     setActivePlan: PropTypes.func.isRequired,
     plans: PropTypes.array.isRequired
 };
